@@ -1,0 +1,5 @@
+# Development tools
+pytest>=7.0
+black>=22.0
+flake8>=4.0
+jupyter
