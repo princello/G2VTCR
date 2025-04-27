@@ -1,6 +1,5 @@
 # G2VTCR
 Graph-based Representation and Embedding of Antigen and TCR for Enhanced Recognition Analysis
-![G2VTCR Workflow](images/Fig1.png "Graph-based Workflow of G2VTCR")
 *Figure 1. G2VTCR framework showing graph-based TCR and epitope representation.*
 
 ## Description
