@@ -3,8 +3,9 @@ import numpy as np
 import random
 import os
 from sklearn.model_selection import train_test_split
+import faiss  # Added missing import
 
-def preprocess_data(raw_data,min_value_counts = 1000, max_value_counts = 20000):
+def preprocess_data(raw_data, min_value_counts = 1000, max_value_counts = 20000):
     """Prepares and preprocesses raw input data for downstream analysis."""
     # Create a DataFrame with required columns
     imm = pd.DataFrame(np.array(raw_data).T, columns=['CDR3', 'Epitope', 'ids'])

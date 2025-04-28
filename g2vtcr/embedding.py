@@ -1,16 +1,9 @@
 import networkx as nx
 from rdkit import Chem
-from karateclub import Graph2Vec
-from torch_geometric.utils import from_networkx, from_smiles
 from gensim.models.doc2vec import Doc2Vec, TaggedDocument
 from karateclub.utils.treefeatures import WeisfeilerLehmanHashing
-
-import networkx as nx
-from rdkit import Chem
-from karateclub import Graph2Vec
-from torch_geometric.utils import from_networkx, from_smiles
-from gensim.models.doc2vec import Doc2Vec, TaggedDocument
-from karateclub.utils.treefeatures import WeisfeilerLehmanHashing
+import pandas as pd
+import numpy as np
 
 def embed_seq(imm_raw, wl_iterations=5, dimensions=256, workers=4, down_sampling=0.0001, epochs=10, learning_rate=0.025, min_count=5, seed=42, attributed=False):
     """
@@ -26,6 +19,7 @@ def embed_seq(imm_raw, wl_iterations=5, dimensions=256, workers=4, down_sampling
     - learning_rate: float, learning rate for training.
     - min_count: int, minimum count for vocabulary trimming.
     - seed: int, random seed for reproducibility.
+    - attributed: bool, whether to use attributed features in WL hashing.
 
     Returns:
     - seq2vec: dict, mapping of sequences to their embeddings.

@@ -1,6 +1,8 @@
 import os
 import logomaker
 import numpy as np
+import pandas as pd
+import matplotlib.pyplot as plt  # Added missing import
 from collections import defaultdict
 from sklearn.feature_extraction.text import TfidfVectorizer
 
